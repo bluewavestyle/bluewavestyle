@@ -675,6 +675,31 @@
             background-color: var(--accent-blue);
             transform: translateY(-3px);
         }
+        /* Ajoutez ces classes CSS dans la section <style> existante */
+.social-links a.tiktok:hover {
+    background-color: #000000;
+}
+
+.social-links a.whatsapp-channel:hover {
+    background-color: var(--whatsapp-green);
+}
+
+.social-links a.facebook:hover {
+    background-color: #1877F2;
+}
+
+.social-links a.instagram:hover {
+    background-color: #E4405F;
+}
+
+/* Optionnel : Style spécifique pour les couleurs des icônes au survol */
+.social-links a i {
+    transition: var(--transition);
+}
+
+.social-links a:hover i {
+    transform: scale(1.1);
+}
 
         .copyright {
             text-align: center;
@@ -914,7 +939,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column"><h3>BlueWave Style</h3><p>Be unique. Be bold. Be blue.</p><div class="social-links"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+                <div class="footer-column"><h3>BlueWave Style</h3><p>Be unique. Be bold. Be blue.</p>
+<div class="social-links">
+    <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://whatsapp.com/channel/0029VbB14EJAojYo9Cq59l3J" target="_blank" class="whatsapp-channel"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.tiktok.com/@bluewavestyle2?_r=1&_t=ZS-957QzUc0UFR" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/share/18LE7P4rj5/?mibextid=wwXIfr" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+</div></div>
                 <div class="footer-column"><h3>Liens</h3><ul><li><a href="#home">Accueil</a></li><li><a href="#products">Produits</a></li><li><a href="#contact">Contact WhatsApp</a></li></ul></div>
                 <div class="footer-column"><h3>Infos</h3><ul><li><a href="#faq">FAQ</a></li><li><a href="#">Livraison</a></li><li><a href="#">Politique retour</a></li></ul></div>
             </div>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlueWave Style | Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            color: #1e1e2f;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo img {
+            height: 44px;
+        }
+        .logo span {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: #1a237e;
+            letter-spacing: -0.5px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #1e1e2f;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 40px;
+            transition: 0.25s;
+        }
+        .nav a:hover {
+            background: #e8eaf6;
+            color: #1a237e;
+        }
+        .nav .btn-main {
+            background: #1a237e;
+            color: white !important;
+            padding: 10px 28px;
+        }
+        .nav .btn-main:hover {
+            background: #3949ab;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 35, 126, 0.25);
+        }
+
+        /* HERO */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            background: linear-gradient(145deg, #ffffff 0%, #e8eaf6 100%);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #1a237e, #3949ab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #444;
+            margin: 20px 0 32px;
+            max-width: 500px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(26, 35, 126, 0.08);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #1a237e;
+            color: white;
+            padding: 14px 36px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-primary:hover {
+            background: #3949ab;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(26, 35, 126, 0.25);
+        }
+        .btn-outline {
+            border: 2px solid #1a237e;
+            color: #1a237e;
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-outline:hover {
+            background: #1a237e;
+            color: white;
+            transform: translateY(-3px);
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        /* FEATURES (mini) */
+        .mini-features {
+            padding: 60px 0;
+            background: white;
+        }
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .mini-grid .item i {
+            font-size: 2.4rem;
+            color: #1a237e;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .mini-grid .item h4 {
+            font-weight: 600;
+        }
+        .mini-grid .item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d1433;
+            color: white;
+            padding: 32px 0 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            transition: 0.3s;
+        }
+        .footer-social a:hover {
+            background: #3949ab;
+            transform: translateY(-3px);
+        }
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .btn-group {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="bws.jpg" alt="BlueWave Style" />
+                <span>BlueWave Style</span>
+            </div>
+            <div class="nav">
+                <a href="https://bluewavestyle.github.io/" target="_blank">Site principal</a>
+                <a href="https://bluewavestyle.github.io/bluewavestyle" target="_blank" class="btn-main">
+                    <i class="fas fa-arrow-right"></i> Accéder
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <i class="fas fa-heart" style="color:#1a237e;"></i> Bienvenue
+                </div>
+                <h1>
+                    <span>BlueWave</span> pense à vous 💙
+                </h1>
+                <p>
+                    Vos besoins clients, notre priorité. Restez à l’affût : le meilleur reste à venir.
+                </p>
+                <div class="btn-group">
+                    <a href="https://bluewavestyle.github.io/bluewavestyle" class="btn-primary">
+                        <i class="fas fa-store"></i> Découvrir
+                    </a>
+                    <a href="https://bluewavestyle.github.io/" class="btn-outline">
+                        <i class="fas fa-info-circle"></i> En savoir plus
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="maillots2.jpeg" alt="BlueWave Style" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MINI FEATURES ===== -->
+    <section class="mini-features">
+        <div class="container">
+            <div class="mini-grid">
+                <div class="item">
+                    <i class="fas fa-comments"></i>
+                    <h4>Communauté</h4>
+                    <p>Échangez avec d'autres passionnés.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Sécurisé</h4>
+                    <p>Vos données protégées.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-star"></i>
+                    <h4>Vos avis</h4>
+                    <p>Chaque retour compte.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Le meilleur à venir</h4>
+                    <p>Restez connectés !</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/bluewavestyle20" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://whatsapp.com/channel/0029VbB14EJAojYo9Cq59l3J" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@bluewavestyle2" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/share/18LE7P4rj5" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p style="color:#b0b0b0; margin-bottom:8px;">
+                <a href="https://bluewavestyle.github.io/">bluewavestyle.github.io</a> &bull;
+                <a href="https://bluewavestyle.github.io/bluewavestyle">Accès direct</a>
+            </p>
+            <div class="copyright">
+                &copy; 2026 BlueWave Style — Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+</body>
+              </html>
